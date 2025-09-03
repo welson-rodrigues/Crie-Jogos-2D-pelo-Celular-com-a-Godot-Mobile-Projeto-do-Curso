@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://qx66olywgb2m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ah2ou"]
+font_size = 150
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(0, 4)
+
+[node name="Nivel1" type="Node2D"]
+
+[node name="texto" type="Label" parent="."]
+offset_left = 223.0
+offset_top = 232.0
+offset_right = 1104.0
+offset_bottom = 437.0
+text = "Olá, Mundo!"
+label_settings = SubResource("LabelSettings_ah2ou")
