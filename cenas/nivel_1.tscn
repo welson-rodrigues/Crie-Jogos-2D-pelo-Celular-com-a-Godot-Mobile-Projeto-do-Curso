@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=5 format=3 uid="uid://qx66olywgb2m"]
 
 [ext_resource type="PackedScene" uid="uid://c6pxbto7kk7cn" path="res://cenas/player.tscn" id="1_ieny5"]
@@ -27,27 +28,49 @@ scale = Vector2(3, 3)
 position = Vector2(160, 164)
 scale = Vector2(3, 3)
 
+=======
+[gd_scene load_steps=3 format=3 uid="uid://qx66olywgb2m"]
+
+[ext_resource type="PackedScene" uid="uid://c6pxbto7kk7cn" path="res://cenas/player.tscn" id="1_ieny5"]
+[ext_resource type="Texture2D" uid="uid://ya6feootgu3e" path="res://icon.svg" id="2_546y7"]
+
+[node name="Nivel1" type="Node2D"]
+
+>>>>>>> bdcd875d52df8c3f41139ff51426bcf1446f6c8d
 [node name="player" parent="." instance=ExtResource("1_ieny5")]
 position = Vector2(664, 285)
 
 [node name="botoes" type="CanvasLayer" parent="."]
 
 [node name="up" type="TouchScreenButton" parent="botoes"]
+<<<<<<< HEAD
 position = Vector2(248, 329)
+=======
+position = Vector2(181, 364)
+>>>>>>> bdcd875d52df8c3f41139ff51426bcf1446f6c8d
 texture_normal = ExtResource("2_546y7")
 action = "move_up"
 
 [node name="down" type="TouchScreenButton" parent="botoes"]
+<<<<<<< HEAD
 position = Vector2(252, 506)
+=======
+position = Vector2(185, 541)
+>>>>>>> bdcd875d52df8c3f41139ff51426bcf1446f6c8d
 texture_normal = ExtResource("2_546y7")
 action = "move_down"
 
 [node name="left" type="TouchScreenButton" parent="botoes"]
+<<<<<<< HEAD
 position = Vector2(93, 406)
+=======
+position = Vector2(26, 441)
+>>>>>>> bdcd875d52df8c3f41139ff51426bcf1446f6c8d
 texture_normal = ExtResource("2_546y7")
 action = "move_left"
 
 [node name="right" type="TouchScreenButton" parent="botoes"]
+<<<<<<< HEAD
 position = Vector2(401, 403)
 texture_normal = ExtResource("2_546y7")
 action = "move_right"
@@ -112,3 +135,8 @@ color = Color(0.37797454, 0.0009868729, 0.54994357, 1)
 position = Vector2(634.2042, 30.550175)
 scale = Vector2(27.15915, 3.289964)
 shape = SubResource("RectangleShape2D_546y7")
+=======
+position = Vector2(334, 438)
+texture_normal = ExtResource("2_546y7")
+action = "move_right"
+>>>>>>> bdcd875d52df8c3f41139ff51426bcf1446f6c8d

@@ -151,7 +151,11 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ki28"]
+<<<<<<< HEAD
 size = Vector2(136, 198)
+=======
+size = Vector2(162, 209)
+>>>>>>> bdcd875d52df8c3f41139ff51426bcf1446f6c8d
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_unwft")
@@ -161,5 +165,9 @@ sprite_frames = SubResource("SpriteFrames_gonb2")
 animation = &"idle"
 
 [node name="colisao" type="CollisionShape2D" parent="."]
+<<<<<<< HEAD
 position = Vector2(-2, 14)
+=======
+position = Vector2(-1, 13.5)
+>>>>>>> bdcd875d52df8c3f41139ff51426bcf1446f6c8d
 shape = SubResource("RectangleShape2D_8ki28")
