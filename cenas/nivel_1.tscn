@@ -65,4 +65,50 @@ color = Color(0.37797454, 0.0009868729, 0.54994357, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/ParedeCima"]
 position = Vector2(634.2042, 30.550179)
 scale = Vector2(27.15915, 3.289964)
-shape = SubResource("RectangleShape2
+shape = SubResource("RectangleShape2D_546y7")
+
+[node name="ParedeBaixo" type="StaticBody2D" parent="Paredes"]
+position = Vector2(7, 658)
+
+[node name="ColorRect" type="ColorRect" parent="Paredes/ParedeBaixo"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(31.866194, 1.5451193)
+color = Color(0.37797454, 0.0009868729, 0.54994357, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/ParedeBaixo"]
+position = Vector2(634.2042, 30.550179)
+scale = Vector2(27.15915, 3.289964)
+shape = SubResource("RectangleShape2D_546y7")
+
+[node name="ParedeEsquerda" type="StaticBody2D" parent="Paredes"]
+position = Vector2(0, 719)
+rotation = -1.5707964
+scale = Vector2(0.57453907, 0.9793502)
+
+[node name="ColorRect" type="ColorRect" parent="Paredes/ParedeEsquerda"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(31.866194, 1.5451193)
+color = Color(0.37797454, 0.0009868729, 0.54994357, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/ParedeEsquerda"]
+position = Vector2(634.2042, 30.550175)
+scale = Vector2(27.15915, 3.289964)
+shape = SubResource("RectangleShape2D_546y7")
+
+[node name="ParedeDireita" type="StaticBody2D" parent="Paredes"]
+position = Vector2(1218, 731.00006)
+rotation = -1.5707964
+scale = Vector2(0.5826885, 0.9814137)
+
+[node name="ColorRect" type="ColorRect" parent="Paredes/ParedeDireita"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(31.866194, 1.5451193)
+color = Color(0.37797454, 0.0009868729, 0.54994357, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/ParedeDireita"]
+position = Vector2(634.2042, 30.550175)
+scale = Vector2(27.15915, 3.289964)
+shape = SubResource("RectangleShape2D_546y7")
