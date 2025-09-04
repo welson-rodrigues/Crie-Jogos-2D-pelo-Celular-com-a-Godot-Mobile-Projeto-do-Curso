@@ -1,17 +1,31 @@
-[gd_scene load_steps=2 format=3 uid="uid://qx66olywgb2m"]
+[gd_scene load_steps=3 format=3 uid="uid://qx66olywgb2m"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_ah2ou"]
-font_size = 150
-shadow_size = 4
-shadow_color = Color(0, 0, 0, 1)
-shadow_offset = Vector2(0, 4)
+[ext_resource type="PackedScene" uid="uid://c6pxbto7kk7cn" path="res://cenas/player.tscn" id="1_ieny5"]
+[ext_resource type="Texture2D" uid="uid://ya6feootgu3e" path="res://icon.svg" id="2_546y7"]
 
 [node name="Nivel1" type="Node2D"]
 
-[node name="texto" type="Label" parent="."]
-offset_left = 223.0
-offset_top = 232.0
-offset_right = 1104.0
-offset_bottom = 437.0
-text = "Olá, Mundo!"
-label_settings = SubResource("LabelSettings_ah2ou")
+[node name="player" parent="." instance=ExtResource("1_ieny5")]
+position = Vector2(664, 285)
+
+[node name="botoes" type="CanvasLayer" parent="."]
+
+[node name="up" type="TouchScreenButton" parent="botoes"]
+position = Vector2(181, 364)
+texture_normal = ExtResource("2_546y7")
+action = "move_up"
+
+[node name="down" type="TouchScreenButton" parent="botoes"]
+position = Vector2(185, 541)
+texture_normal = ExtResource("2_546y7")
+action = "move_down"
+
+[node name="left" type="TouchScreenButton" parent="botoes"]
+position = Vector2(26, 441)
+texture_normal = ExtResource("2_546y7")
+action = "move_left"
+
+[node name="right" type="TouchScreenButton" parent="botoes"]
+position = Vector2(334, 438)
+texture_normal = ExtResource("2_546y7")
+action = "move_right"
