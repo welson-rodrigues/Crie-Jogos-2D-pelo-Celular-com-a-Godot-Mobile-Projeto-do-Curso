@@ -1,11 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://qx66olywgb2m"]
+[gd_scene load_steps=7 format=3 uid="uid://qx66olywgb2m"]
 
 [ext_resource type="PackedScene" uid="uid://c6pxbto7kk7cn" path="res://cenas/player.tscn" id="1_ieny5"]
 [ext_resource type="PackedScene" uid="uid://bwgy6iohdieo3" path="res://cenas/moeda.tscn" id="1_mbaei"]
 [ext_resource type="Texture2D" uid="uid://ya6feootgu3e" path="res://icon.svg" id="2_546y7"]
+[ext_resource type="Script" uid="uid://bcwev6bsh6hkk" path="res://scripts/hud.gd" id="4_14mo6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_546y7"]
 size = Vector2(47.114567, 20.334461)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mbaei"]
+font_size = 50
+shadow_size = 4
+shadow_color = Color(0.30980393, 0.37254903, 0.95686275, 1)
+shadow_offset = Vector2(0, 4)
 
 [node name="Nivel1" type="Node2D"]
 
@@ -13,6 +20,26 @@ size = Vector2(47.114567, 20.334461)
 
 [node name="moeda" parent="moedas" instance=ExtResource("1_mbaei")]
 position = Vector2(852, 508)
+scale = Vector2(3, 3)
+
+[node name="moeda5" parent="moedas" instance=ExtResource("1_mbaei")]
+position = Vector2(433, 532)
+scale = Vector2(3, 3)
+
+[node name="moeda6" parent="moedas" instance=ExtResource("1_mbaei")]
+position = Vector2(897, 140)
+scale = Vector2(3, 3)
+
+[node name="moeda7" parent="moedas" instance=ExtResource("1_mbaei")]
+position = Vector2(136.00003, 368)
+scale = Vector2(3, 3)
+
+[node name="moeda8" parent="moedas" instance=ExtResource("1_mbaei")]
+position = Vector2(967, 344)
+scale = Vector2(3, 3)
+
+[node name="moeda9" parent="moedas" instance=ExtResource("1_mbaei")]
+position = Vector2(393.00003, 293)
 scale = Vector2(3, 3)
 
 [node name="moeda2" parent="moedas" instance=ExtResource("1_mbaei")]
@@ -29,26 +56,31 @@ scale = Vector2(3, 3)
 
 [node name="player" parent="." instance=ExtResource("1_ieny5")]
 position = Vector2(664, 285)
+scale = Vector2(0.6, 0.6)
 
 [node name="botoes" type="CanvasLayer" parent="."]
 
 [node name="up" type="TouchScreenButton" parent="botoes"]
-position = Vector2(248, 329)
+position = Vector2(176, 424)
+scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("2_546y7")
 action = "move_up"
 
 [node name="down" type="TouchScreenButton" parent="botoes"]
-position = Vector2(252, 506)
+position = Vector2(176, 560)
+scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("2_546y7")
 action = "move_down"
 
 [node name="left" type="TouchScreenButton" parent="botoes"]
-position = Vector2(93, 406)
+position = Vector2(88, 496)
+scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("2_546y7")
 action = "move_left"
 
 [node name="right" type="TouchScreenButton" parent="botoes"]
-position = Vector2(401, 403)
+position = Vector2(264, 496)
+scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("2_546y7")
 action = "move_right"
 
@@ -112,3 +144,31 @@ color = Color(0.37797454, 0.0009868729, 0.54994357, 1)
 position = Vector2(634.2042, 30.550175)
 scale = Vector2(27.15915, 3.289964)
 shape = SubResource("RectangleShape2D_546y7")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("4_14mo6")
+
+[node name="containerPontos" type="VBoxContainer" parent="HUD"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.0
+offset_top = 87.0
+offset_right = 91.0
+offset_bottom = 136.0
+grow_horizontal = 2
+
+[node name="pontosNome" type="Label" parent="HUD/containerPontos"]
+layout_mode = 2
+text = "PONTOS:"
+label_settings = SubResource("LabelSettings_mbaei")
+
+[node name="containerPontos2" type="VBoxContainer" parent="HUD"]
+offset_left = 768.0
+offset_top = 88.0
+offset_right = 808.0
+offset_bottom = 157.0
+
+[node name="pontos" type="Label" parent="HUD/containerPontos2"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_mbaei")

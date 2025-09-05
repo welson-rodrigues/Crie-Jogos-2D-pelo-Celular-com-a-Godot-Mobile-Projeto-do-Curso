@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp4u5h7iise10"]
+
+[ext_resource type="AudioStream" uid="uid://bnqk3ounbehxe" path="res://sons/musicaFundo.mp3" id="1_367ph"]
+[ext_resource type="Script" uid="uid://c6pstuyct8ooy" path="res://scripts/musica_controller.gd" id="1_ddstt"]
+
+[node name="MusicaController" type="Node2D"]
+script = ExtResource("1_ddstt")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_367ph")
+volume_db = -10.0

@@ -1,6 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bwgy6iohdieo3"]
+[gd_scene load_steps=10 format=3 uid="uid://bwgy6iohdieo3"]
 
 [ext_resource type="Texture2D" uid="uid://cqq8xuccde56u" path="res://assets/Mini FX, Items & UI/Common Pick-ups/Coin (16 x 16).png" id="1_5k251"]
+[ext_resource type="Script" uid="uid://bcyrx8f2qm0gv" path="res://scripts/moeda.gd" id="1_ld1q8"]
+[ext_resource type="AudioStream" uid="uid://b53ucqpvaceiq" path="res://sons/somMoeda.wav" id="3_u3d6r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ld1q8"]
 atlas = ExtResource("1_5k251")
@@ -41,6 +43,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_5k251"]
 
 [node name="moeda" type="Area2D"]
+script = ExtResource("1_ld1q8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4hil3")
@@ -51,3 +54,9 @@ frame_progress = 0.086167604
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.97839385, 1)
 shape = SubResource("CircleShape2D_5k251")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_u3d6r")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

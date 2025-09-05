@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdmm242qxowwb"]
+
+[ext_resource type="Script" uid="uid://c1u8hygy72lu3" path="res://scripts/menu.gd" id="1_64url"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_aduxj"]
+font_size = 110
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(0, 4)
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_64url")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.28627452, 0, 0.49019608, 1)
+
+[node name="containerBotoes" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -113.0
+offset_top = -309.0
+offset_right = 113.0
+offset_bottom = -97.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="jogar" type="Button" parent="containerBotoes"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "JOGAR"
+
+[node name="sair" type="Button" parent="containerBotoes"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "SAIR"
+
+[node name="containerNomeJogo" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -439.0
+offset_top = 77.0
+offset_right = 440.0
+offset_bottom = 228.0
+grow_horizontal = 2
+
+[node name="nome" type="Label" parent="containerNomeJogo"]
+layout_mode = 2
+text = "JOGO DO CURSO"
+label_settings = SubResource("LabelSettings_aduxj")
+
+[connection signal="pressed" from="containerBotoes/jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="containerBotoes/sair" to="." method="_on_sair_pressed"]

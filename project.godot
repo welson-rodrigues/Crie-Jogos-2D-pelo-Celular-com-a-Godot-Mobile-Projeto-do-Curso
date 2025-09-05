@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="meu-primeiro-jogo"
+run/main_scene="uid://bdmm242qxowwb"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://scripts/global.gd"
+MusicaController="*res://cenas/musica_controller.tscn"
 
 [display]
 
@@ -44,3 +50,4 @@ move_down={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
