@@ -6,7 +6,7 @@ Este repositório contém o projeto completo do jogo de coleta de itens desenvol
 
 ---
 
-### 📚 Sobre o Curso
+### Sobre o Curso
 
 Este curso foi criado para provar que você não precisa de um computador para começar a desenvolver seus próprios jogos. Usando apenas um celular Android e a poderosa Godot Engine, construímos um jogo 2D completo, do zero até a exportação do APK.
 
@@ -24,7 +24,7 @@ O projeto é um jogo de visão de cima (top-down) onde o objetivo é controlar u
 
 ---
 
-### ⚙️ Como Usar este Projeto
+### Como Usar este Projeto
 
 Este projeto serve como um "gabarito" para você comparar com o seu próprio código caso encontre algum problema ou queira estudar a versão finalizada.
 
@@ -42,7 +42,7 @@ O projeto deve abrir e funcionar perfeitamente.
 
 ---
 
-### 🤝 Dúvidas e Contato
+### Dúvidas e Contato
 
 Este repositório é principalmente para fins educacionais e de referência para os alunos do curso.
 
