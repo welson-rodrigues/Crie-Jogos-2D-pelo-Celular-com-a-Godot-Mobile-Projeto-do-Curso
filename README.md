@@ -10,6 +10,8 @@ Este repositório contém o projeto completo do jogo de coleta de itens desenvol
 
 Este curso foi criado para provar que você não precisa de um computador para começar a desenvolver seus próprios jogos. Usando apenas um celular Android e a poderosa Godot Engine, construímos um jogo 2D completo, do zero até a exportação do APK.
 
+### Link para Turma Fundadora https://pay.kiwify.com.br/4qS5Rdk
+
 ### Sobre o Jogo
 
 O projeto é um jogo de visão de cima (top-down) onde o objetivo é controlar um personagem, coletar todas as moedas no cenário e marcar pontos.
