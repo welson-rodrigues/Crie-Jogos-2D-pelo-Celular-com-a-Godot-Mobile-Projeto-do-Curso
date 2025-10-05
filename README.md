@@ -36,9 +36,9 @@ Este projeto serve como um "gabarito" para você comparar com o seu próprio có
     * Extraia o arquivo ZIP no seu celular ou computador.
 
 2.  **Abra na Godot Engine:**
-    * Abra a Godot e, no Gerenciador de Projetos, clique em "**Importar**".
-    * Navegue até a pasta que você extraiu e selecione o arquivo `project.godot`.
-    * Clique em "**Importar e Editar**".
+    * Abra a Godot e, no Gerenciador de Projetos (tela inicial), clique em "**Escanear**".
+    * Navegue até a pasta que você extraiu e selecione ela.
+    * Depois de selecionar clique no botão "**Selecionar Esta Pasta**".
 
 O projeto deve abrir e funcionar perfeitamente.
 
